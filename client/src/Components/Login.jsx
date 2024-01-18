@@ -1,7 +1,7 @@
 // App.jsx
 import React from "react";
-import Login from "./Components/Login.jsx";
-import Signin from "./Components/Signin.jsx";
+import Login from "./Login";
+import Signin from "./Signin";
 
 const App = () => {
   return (
