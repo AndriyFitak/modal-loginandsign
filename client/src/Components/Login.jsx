@@ -1,16 +1,29 @@
-// App.jsx
+// Login.jsx
 import React from "react";
-import Login from "./Login";
-import Signin from "./Signin";
+import { useDispatch } from "react-redux";
+import {  loginUser } from "../redux/uiReducer.js";
 
-const App = () => {
+const Login = () => {
+  const dispatch = useDispatch();
+
+  // const handleLoginClick = () => {
+  //   dispatch(changeModal());
+  // };
+
+  const handleLogin = () => {
+    const username = prompt("Enter username:");
+    const password = prompt("Enter password:");
+    dispatch(loginUser({ username, password }));
+  
+  };
+
   return (
     <div>
-      <h1>Welcome to the App</h1>
-      <Login />
-      <Signin />
+      {/* <button onClick={handleLoginClick}>Увійти</button> */}
+      <button onClick={handleLogin}>Ввійти</button>
     </div>
   );
 };
 
-export default App;
+export default Login;
+

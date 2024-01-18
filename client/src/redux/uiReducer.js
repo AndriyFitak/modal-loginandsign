@@ -15,10 +15,10 @@ const UIReducer = createReducer(initialState, (builder) => {
       state.modalStatus = !state.modalStatus;
     })
     .addCase(registerUser, (state, action) => {
-     
+      console.log("User registered:", action.payload);
     })
     .addCase(loginUser, (state, action) => {
-      
+      console.log("User logged in:", action.payload);
     });
 });
 
